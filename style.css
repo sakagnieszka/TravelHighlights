@@ -1,10 +1,82 @@
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+nav {
+  position: relative;
+  z-index: 10;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f5f5f5;
   color: #333;
@@ -103,6 +175,42 @@ section img {
   align-items: center;
   text-align: center;
 }
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.kontakt {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.kontakt h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+.contact-info {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-info li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.contact-info a {
+  text-decoration: none;
+  color: #333;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
 footer {
   background-color: #333;
   color: #fff;
@@ -115,6 +223,12 @@ footer {
 footer p {
   font-size: 0.9em;
   margin-bottom: 20px;
+}
+footer a {
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #ffcc00;
 }
 @media (max-width: 768px) {
   section {

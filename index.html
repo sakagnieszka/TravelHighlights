@@ -10,9 +10,21 @@
     <header>
       <h1 itemprop="headline">Rzym</h1>
       <h2>Miejsca, Które Zachwycają</h2>
+      <nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#opis">Opis</a></li>
+          <li><a href="#atrakcje">Atrakcje</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section class="wstęp">
+      <section id="opis" class="opis">
         <p itemprop="opis">
           Rzym, znany jako Wieczne Miasto, to stolica Włoch i jedno z
           najważniejszych miejsc w historii cywilizacji. Przepełniony
@@ -25,7 +37,7 @@
           urokowi tego miejsca.
         </p>
       </section>
-      <section class="grid-container">
+      <section id="atrakcje" class="grid-container">
         <div
           class="card"
           itemscope
@@ -188,6 +200,19 @@
           </p>
         </div>
       </section>
+      <section id="kontakt" class="kontakt">
+        <h2>Kontakt</h2>
+        <ul class="contact-info">
+            <li>
+                <strong>Email:</strong>
+                <a href="mailto:kontakt@przyklad.pl">kontakt@przyklad.pl</a>
+            </li>
+            <li>
+                <strong>Telefon:</strong>
+                <a href="tel:+123456789">+48 123 456 789</a>
+            </li>
+        </ul>
+      </section>
     </main>
     <footer>
       <p>&copy; 2024 Odkrywaj Świat. Wszystkie prawa zastrzeżone.</p>
@@ -223,5 +248,6 @@
         </a>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
