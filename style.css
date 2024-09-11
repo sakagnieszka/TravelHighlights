@@ -75,8 +75,12 @@ nav {
   padding: 0;
   box-sizing: border-box;
 }
+h1, h2, h3, nav ul li a {
+  font-family: inherit;
+}
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Pacifico', cursive;
   line-height: 1.6;
   background-color: #f5f5f5;
   color: #333;
@@ -181,16 +185,17 @@ section img {
 }
 .kontakt {
   background-color: #fff;
-  margin: 20px 0;
-  padding: 20px;
+  margin: 20px auto;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: 600px;
 }
 .kontakt h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .contact-info {
   list-style: none;
@@ -200,8 +205,8 @@ section img {
   align-items: center;
 }
 .contact-info li {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-size: 1em;
+  margin-bottom: 5px;
 }
 .contact-info a {
   text-decoration: none;
@@ -261,3 +266,4 @@ footer a:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+
